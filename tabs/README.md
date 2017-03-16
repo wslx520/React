@@ -1,3 +1,8 @@
+# React, Redux, react-router 结合例子
+
+react-router使用了v4版本
+
+
 # Redux Todos Example
 
 This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app).

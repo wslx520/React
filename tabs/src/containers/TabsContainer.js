@@ -16,11 +16,12 @@ let mapStateToProps = (state, ownProps) => {
     // 如下，则 props 中会出现一个 index 属性
     // 初始化时，可能路由有值，但 state 无值
     // 路由的值，保存在 ownProps 的 params 中
-    console.log(state, ownProps);
+    // console.log(state, ownProps);
     return {
         // so, 根据路由的值，算出当前位于哪个 tab
         current: state.index === undefined ? (() => {
-            let { tabs, params: {filter} } = ownProps;
+            let { tabs = [], match } = ownProps;
+            let {params:{filter}} = match;
             let cur = 0;
             tabs.some((tab, i) => {
                 if (tab.label === filter) {
