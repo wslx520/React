@@ -1,4 +1,3 @@
-// 这个容器组件，会被引入到 ../components/Tabs 中
 // 容器组件要与 redux 的 store 交互，所以要比普通组件多引入一些包
 
 import React from 'react';
@@ -7,11 +6,10 @@ import { connect } from 'react-redux';
 // 引入 actionCreator
 import switchTab from '../actions/switchTab';
 // 引入要用到的展示组件
-import Tabs from '../components/Tabs';
+import Tabs from '../components/TreeList';
 
 
 // 这是 connect 的第 1 个参数，决定如何将 state 的属性映射到组件的 props 上
-// 此函数接受的参数依次是：state, ownProps。
 let mapStateToProps = (state, ownProps) => {
     // 此函数必须返回一个纯对象
     // 如下，则 props 中会出现一个 index 属性
@@ -39,7 +37,6 @@ let mapStateToProps = (state, ownProps) => {
 // 这是 connect 的第 2 个参数，决定如何将 dispatch 方法映射到组件的 props 上
 // 如果不传，默认是一个直接返回 dispatch 方法的函数。这样的话，props 上就
 // 会多一个 dispatch 属性（其实就是 store.dispatch 方法）
-// 此函数接受的参数是：dispatch, ownProps
 let mapDispatchToProps = (dispatch, ownProps) => {
     // 这就是默认返回
     // return {dispatch};

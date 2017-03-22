@@ -2,3 +2,23 @@ body {
     background-color: #fff;
     color: #666;
 }
+
+.ant-tree-switcher {
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+    background-color: #eee;
+}
+
+.ant-tree-checkbox-inner {
+    display: inline-block;
+    background-color: #bbb;
+    width: 20px;
+    height: 20px;
+}
+
+.ant-tree-checkbox-checked {
+    .ant-tree-checkbox-inner {
+        background-color: #ea0000;
+    }
+}
