@@ -2,17 +2,15 @@ body {
   background-color: #fff;
   color: #666; }
 
-.ant-tree-switcher {
-  display: inline-block;
-  width: 20px;
-  height: 21px;
-  background-color: #eee; }
+.folder-tree .ant-tree-title {
+  position: relative;
+  padding-left: 34px; }
 
-.ant-tree-checkbox-inner {
-  display: inline-block;
-  background-color: #bbb;
-  width: 20px;
-  height: 20px; }
-
-.ant-tree-checkbox-checked .ant-tree-checkbox-inner {
-  background-color: #ea0000; }
+.folder-tree .ant-tree-title:before {
+  background: url("./Icon-Item-Folder.png") no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 24px;
+  content: ''; }

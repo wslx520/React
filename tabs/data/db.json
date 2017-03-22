@@ -10,6 +10,15 @@
       "number": 111
     },
     {
+      "id": 22,
+      "pid": 1,
+      "name": "这是个文件不能展开了",
+      "type": 1,
+      "mimeType": "zip",
+      "size": 213412,
+      "lastModified": 1490065193959
+    },
+    {
       "id": 2,
       "pid": 1,
       "name": "2查工人有人工一",
@@ -30,6 +39,33 @@
     {
       "id": 4,
       "pid": 2,
+      "name": "目录一个",
+      "type": 0,
+      "mimeType": "",
+      "size": 213412,
+      "lastModified": 1490065193959
+    },
+    {
+      "id": 44,
+      "pid": 2,
+      "name": "这也是个文件",
+      "type": 1,
+      "mimeType": "",
+      "size": 213412,
+      "lastModified": 1490065193959
+    },
+    {
+      "id": 45,
+      "pid": 4,
+      "name": "文件一个",
+      "type": 1,
+      "mimeType": "",
+      "size": 213412,
+      "lastModified": 1490065193959
+    },
+    {
+      "id": 49,
+      "pid": 4,
       "name": "4查工人有人工一",
       "type": 1,
       "mimeType": "",

@@ -1,13 +1,13 @@
 import React from 'react';
 import {Tree} from 'antd';
 import toLoadData from '../actions/toLoadData';
+import 'antd/lib/tree/style/css';
 
 const {TreeNode} = Tree;
 
 
 
 let dataToNode = (data) => data.map(item => {
-    console.log(item.children);
     if (item.children) {
         return <TreeNode key={item.key} title={item.name} id={item.id} item={item}>{dataToNode(item.children)}</TreeNode>
     }
@@ -15,7 +15,10 @@ let dataToNode = (data) => data.map(item => {
 });
 class TreeList extends  React.Component {
     state = {
-        treeData: [{ name: 'pNode 01', key: '0-0', id: 1, type: 0 },]
+        treeData: [{ name: 'pNode 01', key: '0', id: 1, type: 0 },]
+    }
+    constructor(props) {
+        super(props);
     }
     onSelect(info) {
         console.log(`selected: ${info}`);
@@ -27,6 +30,9 @@ class TreeList extends  React.Component {
         let {props} = treeNode;
         let {item} = props;
         console.log(props);
+        if (item.children) {
+            return Promise.resolve();
+        }
         let treeData = this.state.treeData;
         return fetch(`http://localhost:3333/files?pid=${props.id}`).then(response => response.json()).then(node => {
             if (!Array.isArray(node)) node = [node];
@@ -46,7 +52,7 @@ class TreeList extends  React.Component {
         let nodes = dataToNode(this.state.treeData);
         console.log(nodes);
         return (
-            <Tree checkable onSelect={this.onSelect} loadData={this.onLoadData.bind(this)}>{nodes}</Tree>
+            <Tree className="folder-tree" onSelect={this.onSelect} loadData={this.onLoadData.bind(this)}>{nodes}</Tree>
         )
     }
 }
