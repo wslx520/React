@@ -2,12 +2,14 @@
   "files": [
     {
       "id": 1,
+      "pid": 0,
       "name": "查工人有人工一",
       "type": 0,
       "mimeType": "",
       "size": 213412,
       "lastModified": 1490065193959,
-      "number": 111
+      "number": 111,
+      "folderNumber": 1
     },
     {
       "id": 22,
@@ -16,7 +18,8 @@
       "type": 1,
       "mimeType": "zip",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 0
     },
     {
       "id": 2,
@@ -25,7 +28,8 @@
       "type": 0,
       "mimeType": "zip",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 1
     },
     {
       "id": 3,
@@ -34,7 +38,8 @@
       "type": 0,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 1
     },
     {
       "id": 4,
@@ -43,7 +48,8 @@
       "type": 0,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 1
     },
     {
       "id": 44,
@@ -52,7 +58,8 @@
       "type": 1,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 0
     },
     {
       "id": 45,
@@ -61,7 +68,8 @@
       "type": 1,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 0
     },
     {
       "id": 49,
@@ -70,7 +78,8 @@
       "type": 1,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 0
     },
     {
       "id": 5,
@@ -79,7 +88,37 @@
       "type": 1,
       "mimeType": "",
       "size": 213412,
-      "lastModified": 1490065193959
+      "lastModified": 1490065193959,
+      "folderNumber": 0
+    },
+    {
+      "pid": 22,
+      "name": 1111,
+      "id": 50
+    },
+    {
+      "pid": 22,
+      "name": 112121,
+      "id": 141340
+    },
+    {
+      "name": 123,
+      "id": 483330
+    },
+    {
+      "pid": 22,
+      "name": 1121132,
+      "id": 703289
+    },
+    {
+      "pid": 22,
+      "name": 1111,
+      "id": 657307
+    },
+    {
+      "pid": 22,
+      "name": 1111,
+      "id": 136640
     }
   ]
 }

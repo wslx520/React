@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import TabLabel from './TabLabel';
 import TabContent from './TabContent';
 import TreeList from './TreeList';
+import TreeFolderModal from './TreeFolderModal/TreeFolderModal';
 
 const labels = ['tab1', 'tab2', 'tab3'];
 let Tabs = ({current = 0, tabs = [], onClick, match}) => { // <- 这是个 ( 而不是 {，使用后者则需要在 {} 内部显示使用 return 
@@ -28,7 +29,7 @@ let Tabs = ({current = 0, tabs = [], onClick, match}) => { // <- 这是个 ( 而
                 labels.some((label, i) => (current = match.params.filter === label ? i : 0));
                 return (<div className="tab-content">
                     <TabContent index={0} key={0} active={0 === current}>
-                        <TreeList />
+                        <TreeFolderModal visible={true} title="复制到" />
                     </TabContent>
                     <TabContent index={1} key={1} active={1 === current}>{ 'content2 two' }</TabContent>
                     <TabContent index={2} key={2} active={2 === current}>{ 'content3  long' }</TabContent>

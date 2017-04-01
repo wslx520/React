@@ -19,6 +19,7 @@
     "watch-css": "node-sass src/ -o src/ --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "data": "json-server --watch data/db.json --port 3333",
     "eject": "react-scripts eject",
     "test": "react-scripts test"
   }
