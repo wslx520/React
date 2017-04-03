@@ -6,8 +6,10 @@ var config = require('./webpack.config');
 new WebpackDevServer(webpack(config), {
   publicPath: '',
   // publicPath: path.resolve(__dirname, 'dist'),
-  // contentBase 即服务器根目录。比如有引用非webpack打包产生的文件，则会以此目录为根目录进行相关路径的定位
+  
+  // contentBase 即静态文件根目录。比如有引用非webpack打包产生的文件，则会以此目录为根目录进行相关路径的定位
   contentBase: './dist',
+  // static file location
   hot: true,
   proxy: { // proxy URLs to backend development server
       '/api': 'http://localhost:3000'
@@ -15,7 +17,12 @@ new WebpackDevServer(webpack(config), {
       // 比如，代理前：ajax('http://localhost:3000/data')，代理后：ajax('/api/data')
       // 虽然接口服务器也可以通过设置跨域头解决跨域访问，但代理了还是可以减少url长度
   },
-  historyApiFallback: true
+  compress: true, // enable gzip compression
+  historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+  hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
+  https: false, // true for self-signed, object for cert authority
+  noInfo: true, // only errors & warns on hot reload
+  
 }).listen(3000, '0.0.0.0', function (err, result) {
   // 0.0.0.0 可以适配 localhost, 127.0.0.1, 172.16.1.* 等多种情况
   if (err) {
