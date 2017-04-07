@@ -6,7 +6,7 @@ var config = require('./webpack.config');
 new WebpackDevServer(webpack(config), {
   publicPath: '',
   // publicPath: path.resolve(__dirname, 'dist'),
-  // contentBase 即服务器根目录。比如有引用非webpack打包产生的文件，则会以此目录为根目录进行相关路径的定位
+  // contentBase 是静态文件的目录，可以传入一个数组
   contentBase: './dist',
   hot: true,
   historyApiFallback: true
