@@ -71,7 +71,7 @@ module.exports = {
       { 
         test: /\.jsx?$/, 
         // 这么写也是兼容的
-        // loaders: ['react-hot', 'babel?' + JSON.stringify({
+        // loaders: ['react-hot-loader', 'babel-loader?' + JSON.stringify({
         //   presets: ['es2015', 'react', 'stage-0']
         // })], 
         // webpack2 不推荐使用 loaders ，请使用 use 代替
@@ -80,6 +80,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
+              // 如果这里设置了 preset 却没有安装对应的 preset，则会报
+              // A common cause of this error is the presence of a configuration options object without the corresponding preset name
               presets: ['es2015', 'react', 'stage-0']
             }
           }
